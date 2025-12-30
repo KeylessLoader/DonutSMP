@@ -1,0 +1,60 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #0b0e14;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Moving Background Animation */
+.bg-animation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, #1a1f2c 0%, #0b0e14 100%);
+    z-index: -1;
+}
+
+/* Get Mods Button Hover Glow/Grow */
+.get-mods-btn {
+    padding: 15px 30px;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-mods-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+}
+
+/* Modals (Hidden by default) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+}
+
+.modal-content {
+    background: #161b22;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* TOS Hover */
+.tos-link {
+    cursor: pointer;
+    color: gray;
+}
+.tos-link:hover {
+    color: white;
+}
