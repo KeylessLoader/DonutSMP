@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut SMP Mods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="logo" onclick="showPage('home')">Donut SMP</div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('mods')">Get Mods</a>
+            <button class="discord-btn">Join Discord</button>
+        </div>
+    </nav>
+
+    <section id="home-page" class="page active">
+        <div class="hero">
+            <h1>How to Install</h1>
+            <p>An easy way to find and install all mods that are safe to use on your journey.</p>
+            <button class="get-mods-btn" onclick="showPage('mods')">Get Mods</button>
+            <p class="safe-trigger" onclick="openModal('safety-modal')">✓ Verified & safe mods</p>
+        </div>
+    </section>
+
+    <section id="mods-page" class="page">
+        <div class="mod-grid">
+            <div class="mod-card">
+                <div class="mod-header">
+                    <h3>Meter Mod</h3>
+                    <span class="info-icon" onclick="openModal('info-modal')">ⓘ</span>
+                </div>
+                <p>Essential mod for Minecraft 1.21</p>
+                <button class="download-btn" onclick="downloadFile('meter-mod.jar')">Download</button>
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <p class="tos-link" onclick="openModal('tos-modal')">Terms of Service</p>
+    </footer>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('info-modal')">&times;</span>
+            <h2>How to Install</h2>
+            <ul>
+                <li>Download <a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Loader</a> for 1.21</li>
+                <li>Download <a href="https://modrinth.com/mod/fabric-api/versions?g=1.21" target="_blank">Fabric API</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="safety-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('safety-modal')">&times;</span>
+            <h3>Verified & Safe</h3>
+            <p>All mods are scanned and trusted by 10,000+ users.</p>
+        </div>
+    </div>
+
+    <div id="tos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('tos-modal')">&times;</span>
+            <h2>Terms of Service</h2>
+            <p>Your TOS text goes here...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
